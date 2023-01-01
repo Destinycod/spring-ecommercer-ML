@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin("*")
 @Controller
-@RequestMapping(value = "/managers", produces = MediaType.APPLICATION_JSON_VALUE)
-public class ManagerController {
+@RequestMapping(value = "/products", produces = MediaType.APPLICATION_JSON_VALUE)
+public class ProductController {
 
     @GetMapping("")
-    public String home(){
-        return "manager/home";
+    public String show(){
+        return "products/show";
     }
+
 }

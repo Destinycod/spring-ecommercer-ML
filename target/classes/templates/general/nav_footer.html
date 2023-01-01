@@ -6,7 +6,7 @@
 
             <form class="form-inline my-2 my-lg-0" method="post" action="#">
                 <input class="form-control mr-sm-2" type="search"
-                       placeholder="Buscar" aria-label="Search" name="nombre"
+                       placeholder="Buscar" aria-label="Search" name="name"
                        autocomplete="off">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
@@ -26,9 +26,10 @@
                              aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" th:href="@{/products}">Productos</a>
                             <a class="dropdown-item" th:href="@{/manager/users}">Usuarios</a>
-                            <a class="dropdown-item" th:href="@{/manager/orderd}">Ordenes</a>
+                            <a class="dropdown-item" th:href="@{/manager/orders}">Ordenes</a>
                             <a class="dropdown-item" th:href="@{/user/close}">Salir</a>
-                        </div></li>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -39,9 +40,7 @@
 <div th:fragment="footer">
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Spring
-                eCommerce 2021</p>
+            <p class="m-0 text-center text-white">Copyright &copy; Spring eCommerce 2023</p>
         </div>
-        <!-- /.container -->
     </footer>
 </div>
