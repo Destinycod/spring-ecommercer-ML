@@ -3,15 +3,27 @@ package com.curso.ecommerce.app.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
+
 @Getter
 @Setter
+@Entity
+@Table(name = "order_details")
 public class OrderDetail {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private double amount;
     private double price;
     private double total;
+
+    @OneToOne
+    private Order order;
+
+    @OneToOne
+    private Product product;
 
     public OrderDetail() {
     }
